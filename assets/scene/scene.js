@@ -22,7 +22,7 @@ function Scene(sceneElement){
 
   sceneMethods.change = change;
   sceneMethods.reset = reset;
-  sceneMethod.maze = maze;
+  sceneMethods.maze = maze;
   setBody(sceneElement);
   listenToRobots();
 
