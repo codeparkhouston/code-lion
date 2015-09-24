@@ -91,7 +91,7 @@ function Scene(sceneElement){
     };
 
     maze = new Maze(mazeSize.width, mazeSize.height).generate().display();
-
+    sceneMethods.maze = maze;
     setTimeout(function(){
       mazeBounds = maze.getBounds();
     }, 1000);
