@@ -10,17 +10,17 @@ function Helper(allowRun){
   helperMethods.open = open;
   helperMethods.close = close;
 
-  if(allowRun) {
-    helperMethods.runner = runner;
-    helperMethods.reset = init;
-  }
-
   init();
 
   console.log('Type "robot." here to get started!');
   return helperMethods;
 
   function init(){
+    if(allowRun) {
+      runner();
+      return;
+    }
+
     _.each(justEdits, function(editElement){
       editElement.onclick = stopEvent;
       editElement.onfocus = selectOnFocus;
@@ -127,6 +127,7 @@ function Helper(allowRun){
 
   function stopEvent(clickEvent){
     clickEvent.stopPropagation();
+    preventEvent(clickEvent);
   }
 }
 

@@ -8,7 +8,9 @@ body {
   background-image: url(./congruent_outline.png);
 }
 
-.maze ~ .instructions, .record-mode .instructions {
+.maze ~ .instructions,
+.record-mode .instructions,
+.project-mode .instructions {
   right: -40%;
 }
 
@@ -18,11 +20,14 @@ body {
   background-color: #888;
 }
 
-.maze#scene, .record-mode #scene {
+.maze#scene,
+.record-mode #scene,
+.project-mode #scene {
   width: 100%;
 }
 
-.record-mode #scene::after, .record-mode #scene::before {
+.record-mode #scene::after,
+.record-mode #scene::before {
   opacity: 0.75;
   color: #333;
 }
